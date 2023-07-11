@@ -15,6 +15,12 @@ class MyPackage:
     def random(self):
         return random.random()
     
-    def test_bpy(self):
-        bpy.ops.import_scene.obj(filepath="data/Cube.obj")
+    def test_bpy(self, filepath):
+        bpy.ops.import_scene.obj(filepath=filepath)
+        return 0
+    
+    
+    def test_bpy2(self, context):
+        for obj in context.selected_objects:
+            print(obj.name)
         return 0

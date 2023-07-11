@@ -17,3 +17,4 @@ class MyPackage:
     
     def test_bpy(self):
         bpy.ops.import_scene.obj(filepath="data/Cube.obj")
+        return 0
